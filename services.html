@@ -7,12 +7,328 @@
       name="description"
       content="Explore CyberGuard's cybersecurity services, including VPNs, antivirus software, training courses, and firewall protection."
     />
-    <meta
+    <!-- <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;"
-    />
+    /> -->
     <title>CyberGuard Solutions - Services</title>
-    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- <link rel="stylesheet" href="./styles/style.css" /> -->
+    <style>
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.6;
+        color: #e0e0e0;
+        background-color: #0a0f1c;
+      }
+
+      /* Container */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: #1c2526;
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo a {
+        color: #00ff88;
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .nav-menu {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav-menu li {
+        margin-left: 2rem;
+      }
+
+      .nav-menu a {
+        color: #e0e0e0;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: color 0.3s;
+      }
+
+      .nav-menu a:hover,
+      .nav-menu a.active {
+        color: #00ff88;
+      }
+
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: #e0e0e0;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      /* Hero */
+      .hero {
+        background: linear-gradient(135deg, #1c2526 0%, #00ff88 100%);
+        color: #fff;
+        text-align: center;
+        padding: 5rem 0;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background-color: #ff2e63;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      .cta-button:hover {
+        background-color: #d81e4f;
+      }
+
+      /* Service Grid */
+      .service-grid,
+      .social-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        padding: 2rem 0;
+      }
+
+      .service-grid_item,
+      .social-item {
+        background: #1c2526;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 255, 136, 0.2);
+        transition: transform 0.3s;
+      }
+
+      .service-grid_item:hover,
+      .social-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .service-grid_image img,
+      .social-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .service-grid_info {
+        padding: 1rem;
+      }
+
+      .service-grid_name {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #00ff88;
+      }
+
+      .service-grid_price {
+        font-size: 1.2rem;
+        color: #e0e0e0;
+      }
+
+      .service-grid_desc {
+        font-size: 0.9rem;
+        color: #b0b0b0;
+      }
+
+      .cart-button {
+        width: 100%;
+        padding: 0.8rem;
+        background-color: #00ff88;
+        color: #1c2526;
+        border: none;
+        border-radius: 0 0 10px 10px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      .cart-button:hover {
+        background-color: #00cc66;
+      }
+
+      /* Feature Grid */
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        padding: 2rem 0;
+      }
+
+      .feature-item {
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .feature-item i {
+        font-size: 2.5rem;
+        color: #00ff88;
+        margin-bottom: 1rem;
+      }
+
+      .feature-item h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      /* Cart & Checkout */
+      .cart-section,
+      .checkout-section,
+      .contact-section,
+      .about-section,
+      .connect-section {
+        padding: 2rem 0;
+      }
+
+      .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background: #1c2526;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+      }
+
+      .cart-item button {
+        background: #ff2e63;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .cart-item button:hover {
+        background: #d81e4f;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.8rem;
+        background: #2c3e50;
+        border: 1px solid #00ff88;
+        border-radius: 5px;
+        color: #e0e0e0;
+      }
+
+      .checkout-button,
+      .contact-button {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        background-color: #ff2e63;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      .checkout-button:hover,
+      .contact-button:hover {
+        background-color: #d81e4f;
+      }
+
+      /* Footer */
+      footer {
+        background: #1c2526;
+        color: #e0e0e0;
+        text-align: center;
+        padding: 2rem 0;
+      }
+
+      footer a {
+        color: #00ff88;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .nav-menu {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 100%;
+          background: #1c2526;
+          padding: 1rem;
+        }
+
+        .nav-menu.active {
+          display: flex;
+        }
+
+        .nav-toggle {
+          display: block;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+      }
+    </style>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -52,11 +368,11 @@
         <div class="service-grid">
           <div class="service-grid_item">
             <div class="service-grid_image">
-              <img
+              <!-- <img
                 src="https://via.placeholder.com/300x200?text=VPN"
                 alt="Secure VPN Service"
                 loading="lazy"
-              />
+              /> -->
             </div>
             <div class="service-grid_info">
               <p class="service-grid_name">Secure VPN</p>
@@ -76,11 +392,11 @@
           </div>
           <div class="service-grid_item">
             <div class="service-grid_image">
-              <img
+              <!-- <img
                 src="https://via.placeholder.com/300x200?text=Antivirus"
                 alt="Antivirus Software"
                 loading="lazy"
-              />
+              /> -->
             </div>
             <div class="service-grid_info">
               <p class="service-grid_name">Antivirus Pro</p>
@@ -98,11 +414,11 @@
           </div>
           <div class="service-grid_item">
             <div class="service-grid_image">
-              <img
+              <!-- <img
                 src="https://via.placeholder.com/300x200?text=Training"
                 alt="Cybersecurity Training"
                 loading="lazy"
-              />
+              /> -->
             </div>
             <div class="service-grid_info">
               <p class="service-grid_name">Cyber Training</p>
@@ -120,11 +436,11 @@
           </div>
           <div class="service-grid_item">
             <div class="service-grid_image">
-              <img
+              <!-- <img
                 src="https://via.placeholder.com/300x200?text=Firewall"
                 alt="Firewall Protection"
                 loading="lazy"
-              />
+              /> -->
             </div>
             <div class="service-grid_info">
               <p class="service-grid_name">Firewall Pro</p>
