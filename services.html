@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CyberGuard Solutions offers top-tier cybersecurity services, including VPNs, antivirus, and training. Secure your digital world today.">
+    <meta name="description" content="Explore CyberGuard's cybersecurity services, including VPNs, antivirus software, training courses, and firewall protection.">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://via.placeholder.com; script-src 'self'; style-src 'self' https://cdnjs.cloudflare.com;">
-    <title>CyberGuard Solutions - Home</title>
+    <title>CyberGuard Solutions - Services</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
@@ -18,8 +18,8 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
                     <li><a href="cart.html">Cart</a></li>
                     <li><a href="checkout.html">Checkout</a></li>
                     <li><a href="connect.html">Connect</a></li>
@@ -30,17 +30,9 @@
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="container">
-            <h1>Secure Your Digital Future</h1>
-            <p>Protect your data with our advanced cybersecurity solutions.</p>
-            <a href="services.html" class="cta-button">Explore Services</a>
-        </div>
-    </header>
-
     <main class="container">
-        <section class="featured-services" aria-labelledby="featured-heading">
-            <h2 id="featured-heading">Featured Services</h2>
+        <section class="services" aria-labelledby="services-heading">
+            <h1 id="services-heading">Our Cybersecurity Services</h1>
             <div class="service-grid">
                 <div class="service-grid_item">
                     <div class="service-grid_image">
@@ -49,7 +41,7 @@
                     <div class="service-grid_info">
                         <p class="service-grid_name">Secure VPN</p>
                         <p class="service-grid_price">$9.99/month</p>
-                        <p class="service-grid_desc">Encrypt your internet connection with our high-speed VPN.</p>
+                        <p class="service-grid_desc">High-speed, encrypted VPN for secure browsing.</p>
                     </div>
                     <button class="cart-button" data-name="Secure VPN" data-price="9.99" aria-label="Add Secure VPN to cart">Add to Cart</button>
                 </div>
@@ -60,30 +52,31 @@
                     <div class="service-grid_info">
                         <p class="service-grid_name">Antivirus Pro</p>
                         <p class="service-grid_price">$19.99/year</p>
-                        <p class="service-grid_desc">Real-time protection against malware and threats.</p>
+                        <p class="service-grid_desc">Comprehensive malware protection.</p>
                     </div>
                     <button class="cart-button" data-name="Antivirus Pro" data-price="19.99" aria-label="Add Antivirus Pro to cart">Add to Cart</button>
                 </div>
-            </div>
-        </section>
-
-        <section class="why-choose-us" aria-labelledby="why-heading">
-            <h2 id="why-heading">Why Choose CyberGuard?</h2>
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Advanced Security</h3>
-                    <p>State-of-the-art encryption and threat detection.</p>
+                <div class="service-grid_item">
+                    <div class="service-grid_image">
+                        <img src="https://via.placeholder.com/300x200?text=Training" alt="Cybersecurity Training" loading="lazy">
+                    </div>
+                    <div class="service-grid_info">
+                        <p class="service-grid_name">Cyber Training</p>
+                        <p class="service-grid_price">$49.99</p>
+                        <p class="service-grid_desc">Learn to protect yourself online.</p>
+                    </div>
+                    <button class="cart-button" data-name="Cyber Training" data-price="49.99" aria-label="Add Cyber Training to cart">Add to Cart</button>
                 </div>
-                <div class="feature-item">
-                    <i class="fas fa-headset"></i>
-                    <h3>24/7 Support</h3>
-                    <p>Expert assistance whenever you need it.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-user-check"></i>
-                    <h3>Trusted by Thousands</h3>
-                    <p>Join our community of secure users.</p>
+                <div class="service-grid_item">
+                    <div class="service-grid_image">
+                        <img src="https://via.placeholder.com/300x200?text=Firewall" alt="Firewall Protection" loading="lazy">
+                    </div>
+                    <div class="service-grid_info">
+                        <p class="service-grid_name">Firewall Pro</p>
+                        <p class="service-grid_price">$29.99/year</p>
+                        <p class="service-grid_desc">Advanced network security for your devices.</p>
+                    </div>
+                    <button class="cart-button" data-name="Firewall Pro" data-price="29.99" aria-label="Add Firewall Pro to cart">Add to Cart</button>
                 </div>
             </div>
         </section>
